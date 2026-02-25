@@ -69,8 +69,7 @@ class PostLike(models.Model):
     like = models.BooleanField()
 
 
-    class Meta:
-      unique_together = ('user','post',)
+    
 
 
 class Comment(models.Model):
