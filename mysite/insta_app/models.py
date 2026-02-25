@@ -47,7 +47,7 @@ class Post(models.Model):
     description = models.TextField()
     music = models.URLField(null=True,blank=True)
     hashtag = models.ManyToManyField(Hashtag, blank=True)
-    user = models.ManyToManyField(UserProfile,null=True,blank=True,related_name='users')
+    user = models.ManyToManyField(UserProfile,related_name='users')
     location = models.ForeignKey(Location,null=True,blank=True,on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
 
